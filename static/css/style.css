@@ -1,0 +1,51 @@
+body {
+    padding-top: 70px;
+}
+
+/* Only use table-wrapper on screen >600px. */
+@media (min-width: 600px) {
+    .table-wrapper {
+        padding: 10px 30px 5px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        box-shadow: #ddd 2px 2px 0px;
+        width: 650px;
+    }
+}
+
+th {
+    font-size: 1.2em;
+}
+
+form {
+    margin-left: 33%;
+    margin-right: 33%;
+
+}
+
+td {
+    vertical-align: middle !important;
+}
+
+.img-thumbnail {
+    width: 40px;
+    height: 40px;
+}
+
+/* Sticky footer styles
+   -------------------------------------------------- */
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -185px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 185px; /* .push must be the same height as .footer */
+}
