@@ -17,11 +17,11 @@ function launchClientHangout(gid, subject) {
 $('#btn-submit-skills').click(function () {
     $('#results-panel').removeClass('hidden');
     loadData();
-    console.log('btn-skills-match click');
+    //console.log('btn-skills-match click');
 });
 
 function loadData() {
-    results = {
+    results = [{
         "only_in_desc1": [
             "Theory",
             "Probability",
@@ -35,22 +35,23 @@ function loadData() {
             "Education",
             "Teacher",
             "Mathematical concepts"
-        ]
-     //   "common_skills": [],
-     //   "similarity_score": 1.5648092021712583
-    }
+        ],
+         "common_skills": [],
+         "similarity_score": 1.5648092021712583
+    }]
 
     var t = $('#matchResults').DataTable({
         data: results,
         "columns": [
             {data: "only_in_desc1"},
-            {data: "only_in_desc2"}
+            {data: "only_in_desc2"},
+            {data: "similarity_score"}
         ],
         "searching": false,
         "paging": false,
         "columnDefs": [
-            {"width": "25%", "targets": 0},
-            {"width": "25%", "targets": 1}
+            {"width": "40%", "targets": 0},
+            {"width": "40%", "targets": 1}
         ]
     });
 
