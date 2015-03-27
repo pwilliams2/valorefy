@@ -17,7 +17,6 @@ function launchClientHangout(gid, subject) {
 $('#btn-submit-skills').click(function () {
     $('#results-panel').removeClass('hidden');
     loadData();
-    //console.log('btn-skills-match click');
 });
 
 function loadData() {
@@ -37,7 +36,7 @@ function loadData() {
             "Mathematical concepts"
         ],
          "common_skills": [],
-         "similarity_score": 1.5648092021712583
+         "similarity_score": 1.56
     }]
 
     var t = $('#matchResults').DataTable({
@@ -48,10 +47,12 @@ function loadData() {
             {data: "similarity_score"}
         ],
         "searching": false,
-        "paging": false,
+        "bPaginate": false,
+        "bInfo":false,
         "columnDefs": [
             {"width": "40%", "targets": 0},
-            {"width": "40%", "targets": 1}
+            {"width": "40%", "targets": 1},
+            {"text-align": "center", "targets": 2}
         ]
     });
 
